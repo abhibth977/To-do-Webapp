@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <title>to-DO list</title>
+</head>
+
+<body>
+
+  <form id="todo">
+    <div class="container" >
+      <div class="todo-app"> <h1>To-Do List <img src="icon.png" alt="icon"></h1>
+        <div class="row">
+            <input type="text"  id="task" placeholder="Add new task..." >
+            <button id="btn">Add</button>
+        </div>
+      <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+      </ul>
+    </div>
+      
+    </div>
+  </form>
+
+  <!-- Creating Alarm -->
+  <div class="alarm-container" id="popup">
+
+    <div class="table">
+      <div class="cell">
+        <img src="clock.jpg" alt="" class="clock-icon">
+        <h3>Time to do your task.</h3>
+        <h1 id="clock" class="clock"></h1>
+        
+        <select id="hours" class="time"></select>
+        <select id="minutes" class="time"></select>
+        <select id="seconds" class="time"></select>
+        <select id="ampm" class="time">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        
+        <p>
+          <button id="snooze" class="hide-btn alarm-btn">Snooze</button>
+          <button id="startstop" class="alarm-btn set-btn" >Set Alarm</button> <br>
+          <button id="closePopupButton" class="close-btn ">Close</button>
+        </p>
+    
+      </div>
+    </div>
+  
+  </div>
+
+   <!-- A popup window after setAlarm button click -->
+   <div class="alarm-messege" id="alertMessege">
+    <h2>Your alarm is saved, Please don't refresh the page.</h2>
+    <button type="submit" id="closeBtn">OK</button>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="app.js"></script> -->
+</body>
+
+</html>

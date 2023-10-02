@@ -1,0 +1,310 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+.todo-app{
+    min-height: 100vh;
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    /* margin:100px auto 20px ; */
+    margin: auto;
+    /* padding: 40px 30px 70px; */
+    padding: .5rem;
+
+    border-radius: 10px;
+}
+.todo-app h1{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.todo-app h1 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-top:25px ;
+}
+.row:hover{
+    border: solid #ff5945;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    text-transform: capitalize;
+}
+
+#btn{
+    border: none;
+    outline:none ;
+    padding: 16px 50px;
+    background:#ff5945 ;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius:40px ;
+}
+ul li{
+    margin-top: 1rem;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    text-transform: capitalize;
+}
+ul li:hover{
+    border: 1px solid transparent;
+    background: #f4bb91;
+    border-radius:25px;
+}
+
+ul li span{
+    position: absolute;
+    right: 5px;
+    top: 3.5px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+
+.edit{
+    position: absolute;
+    right: 60px;
+    top: 3.5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.alarm{
+    position: absolute;
+    right: 120px;
+    top: 3.5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+  
+  li * {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  
+  li p {
+    padding: 2px 6px 3.5px;
+    border-radius: 2px;
+  }
+  
+  [contenteditable] {
+    background: rgba(70, 70, 70,.7);
+    color: white;
+    border-radius: 3px;
+    width: 50%;
+    height:2rem;
+    padding:5px;
+  }
+  
+  .hide {
+    display: none
+  }
+
+  .check-box{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+
+
+  /* For Alarm */
+  .alarm-container{
+    height: 25rem;
+    width: 22rem;
+    border: 5px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%)scale(0.1);
+    /* visibility: hidden; */
+    display: none;
+    transition: transform 0.4s, top 0.4s;
+  }
+  .open-popup{
+    top: 50%;
+    transform: translate(-50%,-50%)scale(1);
+    /* visibility: visible; */
+    display: block;
+  }
+  
+  /* Image */
+  .clock-icon{
+    height: 4rem;
+    width: 4rem;
+  }
+  
+  /* header */
+  .clock {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4em;
+    color: #fff;
+  }
+  
+  /* buttons */
+  .alarm-btn {
+    cursor: pointer;
+    margin-top: .5rem;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 530;
+    background: #28e757;
+    color: #000;
+    transition: all ease 300ms;
+  }
+  .alarm-btn:hover {
+    color: #fff;
+    background: #ff5945;
+    border: none;
+  }
+  
+  #snooze{
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 8px;
+    outline: 0;
+    background: #fff;
+    color: #000;
+    transition: all ease 300ms;
+  }
+  #snooze:hover{
+    color: #fff;
+    background: #ff5945;
+    border: none;
+  }
+
+  .close-btn{
+    margin-top: 1rem;
+    height: 2rem;
+    width: 90%;
+    font-size: 1rem;
+    background-color: #2477eb;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  .close-btn:hover{
+    color: #fff;
+    background: #ff5945;
+    transition: .25s;
+  }
+  
+  /* center content vertically and horizontally */
+  .table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+    cursor: default;
+  }
+  
+  /* variable misc classes */
+  .hide-btn {
+    display: none;
+  }
+
+  .time{
+    cursor: pointer;
+  }
+
+  .alarm-messege{
+    height:7rem;
+    width: 24rem;
+    border: 5px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+  .closeAlertMessege{
+    left: 50%;
+    transform: translate(-50%,-50%)scale(1);
+    visibility: visible;
+  }
+  #closeBtn{
+    height: 2rem;
+    width: 5rem;
+    font-size: 1rem;
+    background-color: #2477eb;
+    border-radius: 7px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  #closeBtn:hover{
+    color: #fff;
+    background: #ff5945;
+    transition: .25s;
+  }
+
+
+  
